@@ -1,0 +1,17 @@
+﻿<body ng-app="homePage" ng-controller="homePageCtrl">
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="HomePageCtrl.js"></script>
+    <header class="fixed-header">Online Store</header>
+    <div class="topnav">
+        <nav>
+            <a class="active" href="#grocery" ng-click="gridView()">Grocery</a>            
+            <a href="#movies">Movies</a>            
+        </nav>
+    </div>
+   <div>
+    <HomePageView></HomePageView>
+   </div>
+    
+    <footer class="fixed-footer">Copyright © 2016 Your Company</footer>
+</body>

@@ -1,0 +1,26 @@
+﻿
+<link href="StyleSheet1.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="HomePageCtrl.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<div class="GridView" ng-app="homePage" ng-controller="homePageCtrl">
+       <div class="col-md-4" >
+          <div>Search Options</div>
+           <p></p><p></p>
+           <p>Name<span></span><input name="Name" class="searchData" type="text" ng-model="searchData" /></p>
+           <p>Price<span id="spanPassword"></span><input name="Price" class="searchData" type="number" ng-model="searchData"/> </p>
+           <p>Rating<span></span><input name="Rating" class="searchData" type="number" ng-model="searchData" /></p>
+       </div>
+
+    <div class="col-md-8">
+        <div class="col-sm-4" ng-repeat="items in groceryList|filter:searchData">
+            <p><img ng-src="{{items.Image}}" /></p><p>Name: {{items.Name}}</p>
+            <p>Price: {{items.Price}}</p><p>Rating: {{items.Rating}}</p>
+        </div>
+    </div>
+           
+</div>
+

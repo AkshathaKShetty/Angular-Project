@@ -1,0 +1,20 @@
+﻿
+<link href="StyleSheet1.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="LoginPageCtrl.js"></script>
+<form id="userLoginForm" ng-app="myLogin" ng-controller="LoginPageCtrl">
+    <div id="tableloginPage">
+        <p>
+            <label>Username</label>
+            <span></span><input type="text" name="username" ng-model="User.username" required />
+            <span ng-show="userLoginForm.username.$touched && tableloginPage.username.$invalid"></span>       
+       </p>
+        <p>
+            <label>Password</label>
+            <span id="spanPassword"></span><input type="text" ng-model="User.txtPassword" />
+        </p>
+        <p>
+            <button id="Submit" ng-click="AddUser()">Submit</button>
+        </p>
+    </div>
+</form>
